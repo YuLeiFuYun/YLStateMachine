@@ -1,4 +1,39 @@
 # YLStateMachine
+## Requirements
+
+* iOS 13.0+
+* Swift 5.1+
+
+
+
+## Installation
+
+### Cocoapods
+
+To integrate YLStateMachine into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.0'
+use_frameworks!
+
+target 'MyApp' do
+  # your other pod
+  # ...
+  pod 'YLStateMachine'
+end
+```
+
+Run `pod install` to build your dependencies.
+
+
+
+### Swift Package Manager
+
+Select File > Swift Packages > Add Package Dependency. Enter `https://github.com/YuLeiFuYun/YLStateMachine.git` in the "Choose Package Repository" dialog.
+
+
+
 ## Usage
 
 Create a “state" adopts and conforms to the StateType protocol:
@@ -77,46 +112,6 @@ Finally, using this state machine.
 refreshStateMachine.trigger(someAction) {
     ...
 }
-```
-
-
-
-## Requirements
-
-* iOS 13.0+
-* Swift 5.1+
-
-
-
-## Installation
-
-### Cocoapods
-
-To integrate YLStateMachine into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-pod 'YLStateMachine'
-```
-
-Run `pod install` to build your dependencies.
-
-
-
-### Swift Package Manager
-
-Update your `Package.swift` file：
-
-```swift
-// swift-tools-version:5.3
-import PackageDescription
-
-let package = Package(
-    name: "YOUR_PROJECT_NAME",
-    dependencies: [
-        .package(url: "https://github.com/YuLeiFuYun/YLStateMachine.git", from: "1.0.0"),
-    ],
-    ...
-)
 ```
 
 
