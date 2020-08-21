@@ -13,7 +13,7 @@ public protocol OperatorType {
     /// 开始过渡前调用
     func startTransition(_ state: Action.State)
     /// 过渡时调用
-    func transition(with event: Action, completion: @escaping (Action.State) -> Void)
+    func transition(with action: Action, completion: @escaping (Action.State) -> Void)
     /// 结束过渡后调用
     func endTransition(_ state: Action.State)
 }

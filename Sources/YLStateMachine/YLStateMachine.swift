@@ -28,11 +28,11 @@ class YLStateMachine<Operator: OperatorType>: NSObject {
         self.`operator` = `operator`
     }
     
-    func trigger(_ Action: Operator.Action, completion: (() -> Void)? = nil) {
+    func trigger(_ action: Operator.Action, completion: (() -> Void)? = nil) {
         guard currentState.stability != .transitional else { return }
-        currentState = Action.transitionState
+        currentState = action.transitionState
         
-        `operator`.transition(with: Action) { (state) in
+        `operator`.transition(with: action) { (state) in
             self.currentState = state
             completion?()
         }
