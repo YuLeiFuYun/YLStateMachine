@@ -64,12 +64,19 @@ class RefreshOperator: OperatorType {
 }
 ```
 
-Finally, create a state machine:
+Create a state machine:
 
 ```swift
 let refreshOperator = RefreshOperator()
 let refreshStateMachine = YLStateMachine(operator: refreshOperator)
-...
+```
+
+Finally, using this state machine.
+
+```swift
+refreshStateMachine.trigger(someAction) {
+    ...
+}
 ```
 
 
