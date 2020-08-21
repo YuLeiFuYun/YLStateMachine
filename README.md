@@ -74,6 +74,13 @@ let refreshStateMachine = YLStateMachine(operator: refreshOperator)
 
 
 
+## Requirements
+
+* iOS 13.0+
+* Swift 5.1+
+
+
+
 ## Installation
 
 ### Cocoapods
