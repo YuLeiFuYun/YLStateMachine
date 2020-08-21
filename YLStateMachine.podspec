@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.swift_version = "5.1"
   s.platform     = :ios, "13.0"	
   s.source       = { :git => "https://github.com/YuLeiFuYun/YLStateMachine.git", :tag => s.version }
-  s.source_files = "Sources/*.swift"
+  s.source_files = "Sources/YLStateMachine/*.swift"
 end
