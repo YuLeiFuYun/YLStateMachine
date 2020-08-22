@@ -7,12 +7,12 @@
 
 import Foundation
 
-class YLStateMachine<Operator: OperatorType>: NSObject {
+public class YLStateMachine<Operator: OperatorType>: NSObject {
     var completionHandler: (() -> Void)?
     
-    private(set) var `operator`: Operator
+    public private(set) var `operator`: Operator
     
-    private(set) var currentState: Operator.Action.State = .initialState {
+    public private(set) var currentState: Operator.Action.State = .initialState {
         didSet {
             switch currentState.stability {
             case .transitional:
@@ -24,11 +24,11 @@ class YLStateMachine<Operator: OperatorType>: NSObject {
         }
     }
     
-    init(operator: Operator) {
+    public init(operator: Operator) {
         self.`operator` = `operator`
     }
     
-    func trigger(_ action: Operator.Action, completion: (() -> Void)? = nil) {
+    public func trigger(_ action: Operator.Action, completion: (() -> Void)? = nil) {
         guard currentState.stability != .transitional else { return }
         currentState = action.transitionState
         
