@@ -103,7 +103,7 @@ Create a state machine:
 
 ```swift
 let refreshOperator = RefreshOperator()
-let refreshStateMachine = YLStateMachine(operator: refreshOperator)
+let refreshStateMachine = StateMachine(operator: refreshOperator)
 ```
 
 Finally, using this state machine.
