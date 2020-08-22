@@ -1,5 +1,5 @@
 //
-//  YLStateMachine.swift
+//  StateMachine.swift
 //  YLStateMachine
 //
 //  Created by 玉垒浮云 on 2020/8/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class YLStateMachine<Operator: OperatorType>: NSObject {
+public class StateMachine<Operator: OperatorType>: NSObject {
     public var completionHandler: (() -> Void)?
     
     public private(set) var `operator`: Operator
