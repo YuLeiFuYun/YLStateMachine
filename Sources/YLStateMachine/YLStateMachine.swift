@@ -8,7 +8,7 @@
 import Foundation
 
 public class YLStateMachine<Operator: OperatorType>: NSObject {
-    var completionHandler: (() -> Void)?
+    public var completionHandler: (() -> Void)?
     
     public private(set) var `operator`: Operator
     
