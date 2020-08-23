@@ -114,6 +114,8 @@ refreshStateMachine.trigger(someAction) {
 }
 ```
 
+Check out [YLRefreshKit](https://github.com/YuLeiFuYun/YLRefreshKit) to learn how to use it in practice.
+
 
 
 ## License
